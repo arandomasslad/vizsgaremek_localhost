@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANGER SHOP</title>
+    <link rel="stylesheet" href="css/reglog.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="bootstrap.bundle.min.js"></script>
+</head>
+
+<body>
+    <div class="container mt-12">
+        <form id="loginForm" class="row g-3">
+            <div class="col-md-4"></div> <!-- Távtartó -->
+            <div class="col-md-4 bg-light p-4 rounded">
+                <h2 class="text-center mb-4">Üdvözöljük a Danger Shop oldalán!</h2>
+                <div class="mb-3">
+                    <label for="logEmail" class="form-label">Email cím</label>
+                    <input type="email" class="form-control" id="email" name="logEmail">
+                </div>
+                <div class="mb-3">
+                    <label for="logPassword" class="form-label">Jelszó</label>
+                    <input type="password" class="form-control" id="logPassword" name="logPassword">
+                </div>
+                <button type="submit" class="btn btn-primary">Bejelentkezés</button>
+                <button type="button" class="btn btn-outline-secondary float-end"
+                    onclick="forRegister()">Regisztráció</button>
+            </div>
+
+            <div class="col-md-4"></div> <!-- Távtartó -->
+        </form>
+    </div>
+
+
+    <script src="login.js"></script>
+</body>
+
+</html>

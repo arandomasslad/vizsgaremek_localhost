@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Telefonok</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="bootstrap.bundle.min.js"></script>
+    <style>
+        body {
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            height: 100vh;
+            margin: 0;
+        }
+
+        .container {
+            width: 100%;
+            max-width: 800px;
+            color: black; /* Set text color to black */
+        }
+
+        .custom-bg {
+            background-color: #ffffff;
+            padding: 20px;
+            border-radius: 10px;
+        }
+    </style>
+</head>
+
+<body class="bg-dark text-white">
+    <div class="container mt-5">
+        <div class="row">
+            <div class="col-sm-12 custom-bg">
+                <h2 class="text-center mb-4">Üdvözöljük a Danger Shop oldalán!</h2>
+
+                <form id="regForm">
+                    <div class="mb-3">
+                        <label for="email" class="form-label">Email cím</label>
+                        <input type="email" class="form-control" id="email" name="email">
+                    </div>
+                    <div class="mb-3">
+                        <label for="nickName" class="form-label">Becenév</label>
+                        <input type="text" class="form-control" id="nickName" name="nickName">
+                    </div>
+                    <div class="mb-3">
+                        <label for="password" class="form-label">Jelszó</label>
+                        <input type="password" class="form-control" id="password" name="password"
+                            pattern="(?=.*\d)(?=.*[a-z])(?=.*[A-Z]).{8,}" placeholder="Jelszó">
+
+                        <label for="password2" class="form-label">Jelszó újra</label>
+                        <input type="password" class="form-control" id="password2" name="password2"
+                            placeholder="Jelszó újra">
+                    </div>
+                    <button type="submit" class="btn btn-outline-primary">Regisztráció</button>
+                </form>
+
+                
+                <button type="button" class="btn btn-outline-primary mt-2" onclick="forLogin()">Belépés</button>
+
+                <div id="message" class="mt-2">
+                    <h5>A jelszónak a következőket kell tartalmaznia:</h5>
+                    <p id="letter" class="invalid"><b>kisbetű</b></p>
+                    <p id="capital" class="invalid"><b>nagybetű</b></p>
+                    <p id="number" class="invalid"><b>szám</b></p>
+                    <p id="length" class="invalid">Minimum <b>8 karakter</b></p>
+                </div>
+            </div>
+        </div>
+    </div>
+    <script src="reg.js"></script>
+</body>
+
+</html>

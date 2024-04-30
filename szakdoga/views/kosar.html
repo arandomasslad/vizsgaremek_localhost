@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <title>DANGER SHOP</title>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.3/dist/umd/popper.min.js"></script>
+    <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/js/bootstrap.min.js"></script>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/style.css">
+
+</head>
+
+<body>
+    <div class="container py-5">
+        <h1 id="kosarszin" class="mb-4">Kosár</h1>
+
+        <div id="keret" class="table-responsive">
+            <table class="table table-bordered">
+                <thead>
+                    <tr>
+                        <th scope="col">Termék</th>
+                        <th scope="col">Ár</th>
+                        <th scope="col">Darab</th>
+                        <th scope="col">Összesen</th>
+                    </tr>
+                </thead>
+                <tbody id="cartTable"></tbody>
+            </table>
+        </div>
+
+        <div class="text-right mt-4">
+            <h4>Összesen: <span id="totalPrice">0.00 $</span></h4>
+            <a href="home.html" class="btn btn-primary mr-2">Vissza a Vásárláshoz</a>
+            <button class="btn btn-danger" onclick="clearTable()">TÖRLÉS</button>
+            <a class="btn btn-success" onclick="showSuccessMessage()">Fizetés</a>
+
+        </div>
+    </div>
+
+    <script>
+        document.addEventListener('DOMContentLoaded', function () {
+            // Get shoe data from URL parameters
+            var urlParams = new URLSearchParams(window.location.search);
+            var shoeName = urlParams.get('shoeName');
+            var shoePrice = parseFloat(urlParams.get('shoePrice')) || 0; // Default to 0 if not provided
+            var shoeSize = urlParams.get('shoeSize');
+            var quantity = urlParams.get('quantity') || 1; // Default to 1 if not provided
+            var totalPrice = shoePrice * quantity; // Set the initial price based on quantity
+
+            // Display the shoe data in the cart table
+            var cartTable = document.querySelector('.table-bordered');
+            var totalPriceElement = document.getElementById('totalPrice');
+
+            // Check if the cart table exists
+            if (cartTable) {
+                // Check if tbody already exists; if not, create it
+                var cartTableBody = cartTable.querySelector('tbody');
+                if (!cartTableBody) {
+                    cartTableBody = document.createElement('tbody');
+                    cartTable.appendChild(cartTableBody);
+                }
+
+                // Add the shoe data to the cart table
+                cartTableBody.innerHTML += `
+                    <tr>
+                        <td>${shoeName} (Méret: ${shoeSize})</td>
+                        <td>${shoePrice.toFixed(2)} $</td>
+                        <td>${quantity}</td>
+                        <td>${totalPrice.toFixed(2)} $</td>
+                    </tr>
+                `;
+            }
+
+            // Display total price
+            if (totalPriceElement) {
+                totalPriceElement.textContent = totalPrice.toFixed(2) + " $";
+            }
+        });
+
+        function clearTable() {
+            var cartTableBody = document.querySelector('.table-bordered tbody');
+            if (cartTableBody) {
+                cartTableBody.innerHTML = ''; // Clear the table body
+                // You may also want to reset the total price to zero here
+                var totalPriceElement = document.getElementById('totalPrice');
+                if (totalPriceElement) {
+                    totalPriceElement.textContent = "0.00 $";
+                }
+            }
+        }
+
+        function increaseQuantity() {
+            var quantityElement = document.getElementById('quantity');
+            var currentQuantity = parseInt(quantityElement.value);
+            quantityElement.value = currentQuantity + 1;
+
+            // You can update the total price or perform other calculations here
+        }
+
+        function showSuccessMessage() {
+            alert("Sikeres Vásárlás");
+        }
+    </script>
+
+</body>
+
+</html>

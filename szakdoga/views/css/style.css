@@ -1,0 +1,510 @@
+body {
+    background-image: url(../images/proba.gif);
+    background-size: cover;
+    height: 100vh;
+    padding: 0;
+    margin: 0;
+}
+
+#kosarszin {
+    color: #000;
+}
+
+#keret {
+    font-size: 20px;
+}
+
+.bemutatkozo {
+
+    text-align: center;
+    font-size: 500%;
+
+}
+
+.bemutatkozo a {
+    color: black;
+}
+
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    outline: none;
+    border: none;
+    text-decoration: none;
+    text-transform: uppercase;
+    transition: all .2s linear;
+}
+
+html {
+    font-size: 60%;
+    scroll-padding-top: 6rem;
+    scroll-behavior: smooth;
+}
+
+header {
+    position: fixed;
+    top: 0;
+    left: 0;
+    right: 0;
+    z-index: 1000;
+    background: #666;
+    padding: 2rem 9%;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    box-shadow: 0 .5rem 1rem rgba(0, 0, 0, .1);
+}
+
+@media screen and (max-width: 600px) {
+    header {
+        max-width: 390px;
+    }
+
+    header .navbar a::before {
+        content: '';
+        position: absolute;
+        width: 390px;
+        height: 2px;
+        background: orangered;
+        left: 0;
+        bottom: -4px;
+        transition: ease .42s;
+    }
+}
+
+
+header .logo {
+    font-size: 3rem;
+    color: #000;
+    font-weight: 500;
+    text-decoration: none;
+}
+
+header .logo:hover {
+    color: orangered;
+    outline: none;
+}
+
+header .navbar a {
+    font-size: 3rem;
+    color: #000;
+    margin: 0 1rem;
+    text-decoration: none;
+}
+
+header .navbar a::before {
+    content: '';
+    position: absolute;
+    width: 100%;
+    height: 2px;
+    background: orangered;
+    left: 0;
+    bottom: -4px;
+    transition: ease .42s;
+}
+
+header .navbar-toggler-icon .navbar a {
+    font-size: 5rem;
+    color: #000;
+    margin: 0 2rem;
+}
+
+header .navbar a:hover {
+    color: orangered;
+}
+
+header .icons a {
+    font-size: 2rem;
+    color: #000;
+    margin-right: 0rem;
+}
+
+header .icons a:hover {
+    color: orangered;
+}
+
+header .icon-text {
+    font-size: 2rem;
+    color: #000;
+    font-weight: 500;
+    margin-right: auto;
+}
+
+#menu-bar {
+    font-size: 2rem;
+    padding: .5rem 1rem;
+    border: .1rem solid #000;
+    color: #000;
+    border-radius: .1rem;
+    cursor: pointer;
+    display: none;
+}
+
+#bejelentkezesgomb {
+    background-color: grey;
+    border: 2px solid grey;
+    outline-color: grey;
+}
+
+.carousel-image img {
+    height: 200px;
+    object-fit: cover;
+}
+
+.carousel-image2 img {
+    height: 800px;
+    object-fit: cover;
+}
+
+.container .navbar-brand {
+    color: green;
+}
+
+.container .icons a {
+    font-size: 1.5rem;
+    color: #000;
+    margin-left: 0.5rem;
+    padding-right: 10px;
+    height: 30px;
+}
+
+.container .icons a:hover {
+    color: orangered;
+    outline: none;
+}
+
+.featured .heading {
+    color: white;
+}
+
+.featured .heading h3 {
+    text-align: center;
+}
+
+.featured .row {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    background: #f9f9f9;
+    padding: 2rem;
+    align-items: center;
+    margin: 1.5rem 0;
+}
+
+.featured .row .content {
+    flex: 1 1 40rem;
+}
+
+.featured .row .image-container {
+    display: flex;
+    gap: 1.5rem;
+    align-items: center;
+    flex: 1 1 50rem;
+}
+
+.featured .row .image-container .small-image {
+    width: 20%;
+}
+
+.featured .row .image-container .big-image {
+    width: 80%;
+    padding: 1rem;
+}
+
+.featured .row .image-container .small-image img {
+    width: 100%;
+    padding: 1rem;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    cursor: pointer;
+}
+
+.featured .row .image-container .small-image img:hover {
+    background: #666;
+}
+
+.featured .row .image-container .big-image img {
+    width: 100%;
+}
+
+.featured .row .image-container .big-image img:hover {
+    transform: scale(1.05);
+}
+
+.featured .row .content h3 {
+    font-size: 2.5rem;
+    color: #000;
+}
+
+.featured .row .content .stars i {
+    font-size: 1.7rem;
+    color: orange;
+    padding: .5rem 0;
+}
+
+.featured .row .content p {
+    font-size: 1.5rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.featured .row .content .price {
+    font-size: 2.5rem;
+    color: #000;
+    font-weight: bolder;
+}
+
+.featured .row .content .price span {
+    font-size: 1.5rem;
+    color: orange;
+    text-decoration: line-through;
+}
+
+.blog .box-container {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 1.5rem;
+}
+
+.blog .box-container .box {
+    flex: 1 1 30rem;
+    text-align: center;
+    border: .1rem solid rgba(0, 0, 0, .1);
+    border-radius: .5rem;
+    background: #f9f9f9;
+    padding: 2rem;
+}
+
+.blog .box-container .box img {
+    border-radius: 50%;
+    object-fit: cover;
+    height: 15rem;
+    width: 15rem;
+    margin: 1rem 0;
+    border: 4px solid #ddd;
+}
+
+.blog .box-container .box img:hover {
+    transform: scale(1.2);
+}
+
+.blog .box-container .box h3 {
+    font-size: 2.5rem;
+    color: #000;
+}
+
+.blog .box-container .box p {
+    font-size: 1.6rem;
+    color: #666;
+    padding: 1rem 0;
+}
+
+.blog .box-container .box .stars i {
+    color: orangered;
+    font-size: 2rem;
+}
+
+.blog .heading {
+    color: orangered;
+}
+
+.cridet .box {
+    padding: .1rem;
+    text-align: center;
+}
+
+.cridet .box h3 {
+    font-size: 2rem;
+    color: orangered;
+}
+
+.brand-images {
+    display: flex;
+
+    margin: 20px 50px;
+}
+
+.brand-images img {
+    max-width: 100px;
+    height: auto;
+}
+
+.shoe-images {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 10px;
+}
+
+.shoe-image {
+    max-width: 250px;
+    height: auto;
+}
+
+.form-container {
+    padding: 20px;
+}
+
+h1 {
+    color: aliceblue;
+}
+
+a {
+    color: aliceblue;
+}
+
+@media screen and (min-width: 992px) {
+    .desktop-hide {
+        display: none;
+    }
+}
+
+@media (max-width:768px) {
+    #menu-bar {
+        display: block;
+    }
+
+    header .navbar {
+        position: absolute;
+        top: 100%;
+        left: -100%;
+        width: 65%;
+        background: #eee;
+        border-top: .1rem solid rgba(0, 0, 0, .1);
+        z-index: 10;
+    }
+
+    header .navbar a {
+        font-size: 2rem;
+        background: #fff;
+        border: .1rem solid #000;
+        border-radius: .5rem;
+        padding: 1rem;
+        margin: 1rem;
+        display: block;
+        text-align: center;
+    }
+
+    header .navbar.active {
+        left: 0;
+    }
+}
+
+.card {
+    position: fixed;
+    top: 0;
+    left: 100%;
+    width: 500px;
+    background-color: #453E3B;
+    height: 100vh;
+    transition: 0.5s;
+}
+
+.active .card {
+    left: calc(100% - 500px);
+}
+
+.active .container {
+    transform: translateX(-200px);
+}
+
+.card h1 {
+    color: #E8BC0E;
+    font-weight: 100;
+    margin: 0;
+    padding: 0 20px;
+    height: 80px;
+    display: flex;
+    align-items: center;
+}
+
+.card .checkOut {
+    position: absolute;
+    bottom: 0;
+    width: 100%;
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+}
+
+.card .checkOut div {
+    background-color: #E8BC0E;
+    width: 100%;
+    height: 70px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: bold;
+    cursor: pointer;
+}
+
+.card .checkOut div:nth-child(2) {
+    background-color: #1C1F25;
+    color: #fff;
+}
+
+.listCard li {
+    display: grid;
+    grid-template-columns: 100px repeat(3, 1fr);
+    color: #fff;
+    row-gap: 10px;
+}
+
+.listCard li div {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.listCard li img {
+    width: 90%;
+}
+
+.listCard li button {
+    background-color: #fff5;
+    border: none;
+}
+
+.listCard .count {
+    margin: 0 10px;
+}
+
+.price-tag {
+    font-size: 30px;
+}
+
+.brand-images {
+    display: flex;
+    justify-content: space-between;
+    margin: 20px 0;
+}
+
+.brand-images img {
+    max-width: 100px;
+    height: auto;
+}
+
+.faq-container {
+    max-width: 800px;
+    margin: 0 auto;
+}
+
+.faq-question {
+    background-color: #f8f9fa;
+    padding: 10px;
+    border-radius: 5px;
+}
+
+.faq-answer {
+    margin-top: 10px;
+}
+
+.center-header {
+    flex-grow: 1;
+    /* This makes the "DANGER SHOP" text fill the available space */
+    text-align: center;
+}
+
+#szoveg {
+    font-size: 25px;
+}

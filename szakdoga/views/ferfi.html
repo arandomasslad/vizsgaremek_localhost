@@ -1,0 +1,69 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANGER SHOP</title>
+    <link rel="stylesheet" href="css/style2.css">
+    <link rel="stylesheet" href="bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+    <script src="bootstrap.bundle.min.js"></script>
+</head>
+
+<body onload="loading()">
+
+    <!--Navigáció-->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="home.html">DANGER Shop</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item">
+                        <a class="nav-link" href="noi.html">Női</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="ferfi.html">Férfi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="home.html">Vissza</a>
+                    </li>
+
+                </ul>
+                <!-- Keresés -->
+                <form id="search-form" class="d-flex" role="search">
+                    <input id="search-input" class="form-control me-2" type="search" placeholder="Keresés"
+                        aria-label="Search" name="searching">
+                    <button class="btn btn-outline-light me-2" type="submit"><i
+                            class="fa-solid fa-magnifying-glass"></i></button>
+                </form>
+
+
+
+            </div>
+        </nav>
+
+        <h1>Márkák:</h1>
+        <div class="brand-images">
+            <img src="images/nike.jpg" alt="nikebrand">
+            <img src="images/adidas.jpg" alt="adidasbrand">
+            <img src="images/puma.jpg" alt="pumabrand">
+            <img src="images/nb.jpg" alt="newbalancebrand">
+        </div>
+
+        <div class="container mt-5">
+            <button id="fetch-cipok-male" class="btn btn-outline-dark">Telefonok lekérdezése</button>
+            <div id="cipo-list" class="row">
+
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+
+</html>

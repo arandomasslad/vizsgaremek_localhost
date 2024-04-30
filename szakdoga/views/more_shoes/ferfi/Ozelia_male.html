@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANGER Shop</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <!--Navigáció-->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="../../home.html">DANGER Shop</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../noi.html">Női</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../ferfi.html">Férfi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../gyerek.html">Gyerek</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../kosar.html">Kosár</a>
+                    </li>
+                </ul>
+
+            </div>
+        </nav>
+        <p></p>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 shoe-images">
+                    <img class="shoe-image" src="../../cipo_kepek/adidas/ferfi/ozelia.jpg" alt="Shoe 1">
+                    <img class="shoe-image" src="ozelia_2.avif" alt="Shoe 2">
+                    <img class="shoe-image" src="ozelia_3.jfif" alt="Shoe 3">
+                    <img class="shoe-image" src="ozelia_4.webp" alt="Shoe 4">
+                </div>
+                <div class="col-md-6 form-container">
+                    <form action="../../kosar.html" method="get">
+                        <input type="hidden" name="shoeName" value="Ozelia">
+                        <input type="hidden" name="shoePrice" value="125">
+                        <div class="form-group">
+                            <label for="shoeSize">Válasszon méretet:</label>
+                            <select class="form-control" id="shoeSize" name="shoeSize">
+                                <option>35</option>
+                                <option>36</option>
+                                <option>37</option>
+                                <option>38</option>
+                                <option>39</option>
+                                <option>40</option>
+                                <option>41</option>
+                                <option>42</option>
+                                <option>43</option>
+                                <option>44</option>
+                                <option>45</option>
+                                <option>46</option>
+                                <option>47</option>
+                                <option>48</option>
+                                <option>49</option>
+                            </select>
+                        </div>
+                        <div class="form-group">
+                            <label for="quantity">Darab:</label>
+                            <input type="number" class="form-control" id="quantity" name="quantity" value="1" min="1">
+                        </div>
+                        <div class="price-tag"></div>
+                        <button type="submit" class="btn btn-primary">Kosárba rak</button>
+                    </form>
+                </div>
+                <p></p>
+
+                <!-- Adidas Ozelia Leírás -->
+                <div class="container description-container mt-5 p-4 border rounded">
+                    <h2 class="text-center mb-4">Adidas Ozelia</h2>
+                    <p class="description-text">
+                        Az Adidas Ozelia egy stílusos és kényelmes sportcipő, amely az Adidas modern designját és
+                        innovációját képviseli.
+                        A cipő kifejezi az eleganciát és a funkcionalitást, ideális választás lehet mindennapi viseletre
+                        vagy aktív életmódhoz.
+                    </p>
+                    <p class="description-text">
+                        Az Ozelia modell kiváló minőségű anyagokból készült, és rendelkezik az Adidas legfrissebb
+                        technológiáival, amelyek
+                        biztosítják a lábfej támogatását és a maximális kényelmet a viselője számára.
+                    </p>
+                    <p class="description-text">
+                        A cipő egyedi designja és elérhető különböző színváltozatai lehetővé teszik, hogy kifejezd a
+                        saját stílusodat és
+                        emelkedj ki a tömegből.
+                    </p>
+                </div>
+
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>

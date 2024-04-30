@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html lang="hu">
+
+<head>
+    <meta charset="UTF-8">
+    <link rel="stylesheet" type="text/css" href="../../css/style.css">
+
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>DANGER Shop</title>
+    <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/4.5.2/css/bootstrap.min.css">
+
+</head>
+
+<body>
+
+    <!--Navigáció-->
+    <div class="container">
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/views/home.html">DANGER Shop</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ml-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../noi.html">Női</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../ferfi.html">Férfi</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../gyerek.html">Gyerek</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="../../kosar.html">Kosár</a>
+                    </li>
+                </ul>
+                <!--Keresés-->
+                <form class="form-inline my-2 my-lg-0">
+                    <input class="form-control mr-sm-2" type="search" placeholder="Keresés" aria-label="Search">
+                    <button class="btn btn-outline-success my-2 my-sm-0" type="submit">Keresés</button>
+                </form>
+            </div>
+        </nav>
+        <p></p>
+
+        <div class="container">
+            <div class="row">
+                <div class="col-md-6 shoe-images">
+                    <img class="shoe-image" src="force_1.webp" alt="Shoe 1">
+                    <img class="shoe-image" src="force_2.webp" alt="Shoe 2">
+                    <img class="shoe-image" src="force_3.webp" alt="Shoe 3">
+                    <video loop class="shoe-image" autoplay muted>
+                        <source src="force_4.mov" type="video/mp4">
+                        Your browser does not support the video tag.
+                    </video>
+                </div>
+                <div class="col-md-6 form-container">
+                    <form>
+                        <div class="form-group">
+                            <label for="shoeSize">Válasszon méretet:</label>
+                            <select class="form-control" id="shoeSize">
+                                <option>35</option>
+                                <option>37</option>
+                                <option>43</option>
+                            </select>
+                        </div>
+                        <button type="submit" class="btn btn-primary">Kosárba rak</button>
+                    </form>
+                </div>
+
+                <p></p>
+
+                <!-- Nike Air Force 1 Leírás -->
+                <div class="container description-container mt-5 p-4 border rounded">
+                    <h2 class="text-center mb-4">Nike Air Force 1</h2>
+                    <p class="description-text">
+                        Emeld stílusod az ikonikus Nike Air Force 1-cel. Ez az időtlen klasszikus cipő generációkon
+                        átívelő
+                        stílust és kényelmet kínál.
+                        Az Air Force 1 elegáns dizájnnal és páratlan kényelemmel rendelkezik, fehér bőr felsőrésszel és
+                        jellegzetes sziluettel, ami
+                        sokoldalúvá teszi bármely alkalmi viseletet vagy streetwear stílust.
+                    </p>
+                    <p class="description-text">
+                        Az Air Force 1 különböző méretválasztékot kínál, hogy tökéletes illeszkedést biztosítson, míg
+                        strapabíró kialakítása hosszú
+                        élettartamot garantál. Lépj be a legendák világába ezzel a cipővel, amely a street kultúra és a
+                        cipőrajongók számára
+                        egyaránt szimbolikus.
+                    </p>
+                </div>
+            </div>
+        </div>
+    </div>
+
+</body>
+
+</html>
